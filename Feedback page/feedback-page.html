@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Navigation bar styles -->
+    <link rel="stylesheet" href="nav_bar_styles.css">
+    <!-- Home page styles -->
+    <link rel="stylesheet" href="home-page-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navigation">
+        <!-- logo -->
+        <div class="logo-container">
+            <a href="home-page.html">
+                <img class="logo" src="images/logo.png" alt="logo">
+            </a>
+        </div>
+        <!--  -->
+
+        <!-- Title -->
+        <div class="title-container">
+            <!-- Menu icon for resposive screen -->
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"onclick="toggleMenu()"></i>
+            </div>
+            <h1 id="topic">Life Below Water</h1>
+
+            <ul class="list" id="list">
+                <li id="homeNav"><a href="home-page.html">Home</a></li>
+                <li id="galleryNav"><a href="#">Gallery</a></li>
+                <li id="shopNav"><a href="#">Shop</a></li>
+                <li id="siteNav"><a href="#">Sitemap</a></li>
+                <li id="aboutUsNav"><a href="#">About Us</a></li>
+                <li id="feedbackNav"><a href="#" class="active">Feedback</a></li>
+            </ul>
+        </div>
+
+        <!-- Search bar -->
+        <form id="search-container" class="search-container">
+            <input type="text" placeholder="Search here...">
+            <!-- this button should handle by using javascript -->
+            <button type="reset"><img src="images/search.png" alt="search"></button>
+        </form>
+
+        <div class="profile">
+            <a href="#">
+                <img class="user" id="userIcon" src="images/user.png" alt="user">
+            </a>
+        </div>
+    </nav>
+
+    <div class="page">
+        <div class="background-image">
+            <img src="../images/feedback_background.png" alt="Feedback Background">
+        </div>
+        <form class="feedback_form" id="feedback_form">
+            <fieldset class="fieldset1">
+                <legend><img src="../images/feedback.png" alt="Feedback"></legend>
+                <h3>Give us your valuable feedback</h3>
+                
+                <div class="inputs">
+                    <h5>Recuired fields *</h5>
+                    <!-- name -->
+                    <label>* Name :</label>
+                    <input type="text" class="name" id="name" placeholder="Enter your name" required><br>
+                    <!-- Email -->
+                    <label>* Email :</label> 
+                    <input type="email" class="email" id="email" placeholder="Enter your email" required><br><br>
+                    
+
+                    <!-- rating emojis -->
+                    <div class="rating">
+                        <label>Rate your user experience.</label><br><br>
+                        <div class="emoji" id="emoji4">😠</div>
+                        <div class="emoji" id="emoji5">😢</div>
+                        <div class="emoji" id="emoji1">😊</div>
+                        <div class="emoji" id="emoji3">😍</div>
+                    </div>
+
+                    <br>
+                    Did you completed your visiting task ?<br>     
+                    <label>
+                        <input type="radio" name="task1" value="yes"> 
+                        Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="task1" value="no">
+                        No
+                    </label><br><br>
+                    Was this website informative and easy to navigate through ?<br>     
+                    <label>
+                        <input type="radio" name="task2" value="yes">
+                        Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="task2" value="no">
+                        No
+                    </label><br><br>
+
+                    <label>Would you like to get new updates about the website or the products ?</label>
+                    <select name="updates" id="updates">
+                        <option value="yes">Yes - via Notification</option>
+                        <option value="yes">Yes - via Email</option>
+                        <option value="no">No</option>
+                    </select><br>   
+                    
+                    <!-- text area -->
+                    <br>
+                    <textarea class="textarea" rows="5" cols="70" placeholder="If you have any further feedback or queries we will gladly accept it."></textarea>
+                    
+                    <br><br>
+                    <!-- submit button -->
+                    <button class="Submit_button" id="submitButton" onclick="button_change()">Submit</button>
+                   
+                </div>    
+
+            </fieldset>
+        </form>
+    </div>
+
+
+
+    <!-- JAva Script part -->
+    <script>
+        function toggleMenu() {
+            var menuList = document.getElementById("list");
+            menuList.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
