@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <!-- Navigation bar styles -->
     <link rel="stylesheet" href="nav_bar_styles.css">
+    <!-- Home page styles -->
+    <link rel="stylesheet" href="home-page-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -20,6 +24,9 @@
         <!-- Title -->
         <div class="title-container">
             <!-- Menu icon for resposive screen -->
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"onclick="toggleMenu()"></i>
+            </div>
             <h1 id="topic">Life Below Water</h1>
 
             <ul class="list" id="list">
@@ -47,5 +54,24 @@
     </nav>
     <!-- end of navigation bar -->
     
+    <!-- Home page contents -->
+    <div class="page">
+        <!-- home page first section -->
+        <div class="background">
+          <div class="sdg-text">
+              <div class="sdg_num">14</div><div class="life">LIFE BELOW<br>WATER</div> 
+              <h2 class="description">Conserve and sustainably use the oceans, seas and marine resources for sustainable development.</h2>
+          </div>
+        </div>
+
+    </div>
+
+    <!-- JAva Script part -->
+    <script>
+        function toggleMenu() {
+            var menuList = document.getElementById("list");
+            menuList.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
